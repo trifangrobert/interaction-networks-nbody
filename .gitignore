@@ -1,0 +1,53 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Generated report PDFs
+docs/*.pdf
+
+# Training and experiment outputs
+runs/**
+!runs/**/
+!runs/**/hparams.yml
+!runs/**/metrics.yml
+
+# Weights and generated media
+*.pt
+*.pth
+*.ckpt
+*.mp4
+*.gif
+
+# Weights & Biases
+wandb/
+**/wandb/

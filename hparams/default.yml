@@ -1,0 +1,21 @@
+# Data
+n_train_sims: 500
+n_val_sims: 50
+n_bodies: 3
+n_steps: 100
+dt: 0.01
+
+# Model
+edge_hidden_dim: 128
+n_edge_layers: 1
+node_hidden_dim: 128
+effect_dim: 64
+
+# Training
+torch_seed: 0
+lr: 0.0001
+epochs: 100
+batch_size: 256
+
+# Output
+output_dir: ../runs

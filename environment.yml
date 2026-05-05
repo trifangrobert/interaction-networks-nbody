@@ -1,0 +1,38 @@
+name: nbody-gnn
+
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+  - pip
+
+  # PyTorch — CPU + MPS (Apple Silicon); swap pytorch-cuda=12.1 for CUDA machines
+  - pytorch::pytorch>=2.2
+  - pytorch::torchvision
+  - pytorch::torchaudio
+  - pytorch::cpuonly          # remove this line on a CUDA machine
+
+  # Scientific stack
+  - numpy>=1.26
+  - matplotlib>=3.8
+  - scipy>=1.12
+
+  # Jupyter
+  - jupyter
+  - ipykernel
+  - ipywidgets
+
+  # Utilities
+  - tqdm
+  - pyyaml
+  - wandb
+
+  - pip:
+    # PyG — install via pip; conda packages lag behind
+    # torch-scatter/sparse/cluster omitted: build from source fails in conda pip
+    # subprocess; PyG 2.5+ has pure-Python fallbacks for aggr='add'
+    - torch-geometric>=2.5

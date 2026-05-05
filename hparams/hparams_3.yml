@@ -1,0 +1,23 @@
+# Data
+n_train_sims: 2000
+n_val_sims: 200
+n_bodies: 3
+n_steps: 100
+dt: 0.01
+
+# Model — paper architecture (Battaglia et al. 2016)
+# fR: 4 hidden layers x 150 units, effect_dim=50
+# fO: 1 hidden layer x 100 units
+edge_hidden_dim: 150
+n_edge_layers: 4
+node_hidden_dim: 100
+effect_dim: 50
+
+# Training
+torch_seed: 0
+lr: 0.001
+epochs: 200
+batch_size: 256
+
+# Output
+output_dir: ../runs
