@@ -47,6 +47,8 @@ runs/**
 *.ckpt
 *.mp4
 *.gif
+!docs/images/*.mp4
+!docs/images/*.gif
 
 # Weights & Biases
 wandb/
